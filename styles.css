@@ -32,3 +32,26 @@ main {
   flex-direction: column;
   text-align: center;
 }
+
+section {
+  width: 80%;
+  height: 60%;
+  margin: 8vh 0 0 5vw;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  overflow: hidden;
+}
+
+section div {
+  outline: 2px solid rgb(37, 10, 116);
+}
+
+section div:last-child {
+  grid-area: 3/3;
+}
+
+.player-icon {
+  font-size: 6vh;
+}
+
