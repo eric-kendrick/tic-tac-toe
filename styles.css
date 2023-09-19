@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Tahoma, sans-serif;
+  color: rgb(173, 150, 208);
+  display: flex;
+  background-color:  rgb(183, 153, 229);
+}
+
+aside {
+  font-size: 4vh;
+  width: 25vw;
+  height: 100vh;
+  padding-top: 6vh;
+  flex-direction: column;
+  text-align: center;
+  background-image: linear-gradient(to top, rgb(37, 10, 116), rgb(73, 21, 232));
+}
+
+main {
+  color: rgb(73, 21, 232);
+  font-size: 6vh;
+  width: 50vw;
+  height: 100vh;
+  padding-top: 10vh;
+  border-left: 1px solid rgb(173, 150, 208);
+  border-right: 1px solid rgb(173, 150, 208);
+  flex-direction: column;
+  text-align: center;
+}
