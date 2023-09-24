@@ -1,5 +1,5 @@
 //-------------- Query Selectors ------------//
-var boxes = document.querySelectorAll('section > div'), clickCount = 0;
+var boxes = document.querySelectorAll('section > div');
 var playerOneDisplay = document.querySelector('.player-one-header');
 var playerTwoDisplay = document.querySelector('.player-two-header');
 var messageDisplay = document.querySelector('.board-message');
@@ -7,7 +7,9 @@ var resetBtn = document.querySelector('.reset-btn');
 
 //------------- Variables -------------------//
 var players = [];
+var startingPlayer;
 var currentPlayer;
+var clickCount = 0;
 
 
 //------------- Event Listeners ------------//
@@ -15,7 +17,7 @@ document.addEventListener("DOMContentLoaded", addPlayers);
 boxes.forEach(function (box) {
   box.addEventListener('click', boxClicked);
 });
-// resetBtn.addEventListener('click', resetGame)// <-----For testing reset functionality;
+resetBtn.addEventListener('click', resetGame)// <-----For testing reset functionality;
 
 
 //------------- Data Functions --------------//
@@ -33,12 +35,17 @@ function addPlayers() {
   var player2 = createPlayer(2, "O");
   players.push(player1, player2);
   currentPlayer = player1;
-};
+  currentPlayerMessage();
+}
 
 function changePlayer() {
   currentPlayer = currentPlayer === players[0] ? players[1] : players[0];
   messageDisplay.innerText = `${currentPlayer.token} turn`;
 };
+
+function newGamePlayerChange() {
+  startingPlayer = startingPlayer === players[0] ? players[1] : players[0];
+}
 
 function checkForWin(player) {
   var winArrays = [
@@ -56,20 +63,21 @@ function checkForWin(player) {
     if (one.innerHTML === player.token && two.innerHTML === player.token &&
       three.innerHTML === player.token) {
         winnerMessage(player);
-        setTimeout(function() {
-          resetGame();
-        }, 2000);
-      }
+    }
+  }
+  if (clickCount === 9) {
+    drawMessage();
   }
 };
 
 function resetGame() {
-  for (var i = 0; i < boxes.length; i++) {
-    boxes[i].innerText = '';
-    boxes[i].classList.remove('clicked');
-    changePlayer();
-  }
-};
+  boxes.forEach(function(box) {
+    box.innerHTML = '';
+    box.classList.remove('clicked');
+  });
+  clickCount = 0;
+  currentPlayerMessage();
+}
 
 function addClick(e) {
   clickCount++;
@@ -79,19 +87,29 @@ function addClick(e) {
 //-------------- DOM Functions ---------------//
 
 function boxClicked(e) {
-  if (clickCount >= 9) {
+  if (clickCount === 9) {
     resetGame();
   } else {
     if (e.target.classList.contains('clicked') === false) {
       addClick(e);
       e.target.innerHTML = currentPlayer.token;
+
+      checkForWin(currentPlayer);
+      changePlayer();
     }
-    checkForWin(currentPlayer);
-    changePlayer();
   }
 }
 
 function winnerMessage(player) {
   var winMessage = `Congrats! ${player.token} wins!`;
-  messageDisplay.innerText = winMessage;
+  messageDisplay.innerHTML = winMessage;
+}
+
+function drawMessage() {
+  var message = `It's a draw!`;
+  messageDisplay.innerHTML = message;
+}
+
+function currentPlayerMessage() {
+  messageDisplay.innerText = `${currentPlayer.token} turn`;
 }
