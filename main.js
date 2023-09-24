@@ -63,20 +63,25 @@ function checkForWin(player) {
     if (one.innerHTML === player.token && two.innerHTML === player.token &&
       three.innerHTML === player.token) {
         winnerMessage(player);
+        resetGame()
     }
   }
   if (clickCount === 9) {
     drawMessage();
+    resetGame();
+    
   }
 };
 
 function resetGame() {
-  boxes.forEach(function(box) {
-    box.innerHTML = '';
-    box.classList.remove('clicked');
-  });
-  clickCount = 0;
-  currentPlayerMessage();
+  setTimeout(function() {
+    boxes.forEach(function(box) {
+      box.innerHTML = '';
+      box.classList.remove('clicked');
+    });
+    clickCount = 0;
+    currentPlayerMessage();
+  }, 2000);
 }
 
 function addClick(e) {
@@ -87,29 +92,27 @@ function addClick(e) {
 //-------------- DOM Functions ---------------//
 
 function boxClicked(e) {
-  if (clickCount === 9) {
-    resetGame();
-  } else {
-    if (e.target.classList.contains('clicked') === false) {
-      addClick(e);
-      e.target.innerHTML = currentPlayer.token;
+  if (e.target.classList.contains('clicked') === false) {
+    e.target.innerHTML = currentPlayer.token;
 
-      checkForWin(currentPlayer);
-      changePlayer();
-    }
+    changePlayer();
+    addClick(e);
+    checkForWin(players[0]);
+    checkForWin(players[1]);
+  }
+  if (clickCount === 9) {
+      drawMessage();
   }
 }
 
 function winnerMessage(player) {
-  var winMessage = `Congrats! ${player.token} wins!`;
-  messageDisplay.innerHTML = winMessage;
+  messageDisplay.innerHTML = `Congrats! ${player.token} wins!`;
 }
 
 function drawMessage() {
-  var message = `It's a draw!`;
-  messageDisplay.innerHTML = message;
+  messageDisplay.innerHTML = `It's a draw!`;
 }
 
 function currentPlayerMessage() {
-  messageDisplay.innerText = `${currentPlayer.token} turn`;
+  messageDisplay.innerHTML = `${currentPlayer.token} turn`;
 }
