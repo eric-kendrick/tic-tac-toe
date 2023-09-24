@@ -55,3 +55,7 @@ section div:last-child {
   font-size: 6vh;
 }
 
+.board-message {
+  font-size: 32px;
+}
+
