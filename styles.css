@@ -6,29 +6,28 @@
 
 body {
   font-family: Verdana, Tahoma, sans-serif;
-  color: rgb(173, 150, 208);
   display: flex;
-  background-color:  rgb(183, 153, 229);
+  background-image: linear-gradient(to top, rgb(112, 78, 207), rgb(194, 176, 242));
+
 }
 
 aside {
-  font-size: 4vh;
+  color: rgb(201, 183, 229);
+  font-size: 5vh;
   width: 25vw;
   height: 100vh;
   padding-top: 6vh;
   flex-direction: column;
   text-align: center;
-  background-image: linear-gradient(to top, rgb(37, 10, 116), rgb(73, 21, 232));
+  background-image: linear-gradient(to top, rgb(17, 5, 55), rgb(56, 22, 156));
 }
 
 main {
-  color: rgb(73, 21, 232);
-  font-size: 6vh;
+  color:  rgb(37, 10, 116);
+  font-size: 8vh;
   width: 50vw;
   height: 100vh;
-  padding-top: 10vh;
-  border-left: 1px solid rgb(173, 150, 208);
-  border-right: 1px solid rgb(173, 150, 208);
+  padding-top: 12vh;
   flex-direction: column;
   text-align: center;
 }
@@ -36,7 +35,7 @@ main {
 section {
   width: 80%;
   height: 60%;
-  margin: 8vh 0 0 5vw;
+  margin: 10vh 0 0 5vw;
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
@@ -44,18 +43,13 @@ section {
 }
 
 section div {
-  outline: 2px solid rgb(37, 10, 116);
+  padding-top: 3vh;
+  outline: 3px solid rgb(37, 10, 116);
 }
 
 section div:last-child {
   grid-area: 3/3;
 }
 
-.player-icon {
-  font-size: 6vh;
-}
 
-.board-message {
-  font-size: 32px;
-}
 
