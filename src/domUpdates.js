@@ -15,7 +15,7 @@ boxes.forEach(function (box) {
 
 function changePlayer() {
   currentPlayer = currentPlayer === players[0] ? players[1] : players[0];
-  messageDisplay.innerText = `${currentPlayer.token} turn`;
+  messageDisplay.innerText = `${currentPlayer.token}'s turn`;
 };
 
 function newGamePlayerChange() {
@@ -23,7 +23,7 @@ function newGamePlayerChange() {
 }
 
 function winnerMessage(player) {
-  messageDisplay.innerHTML = `Congrats! ${player.token} wins!`;
+  messageDisplay.innerHTML = `${player.token} wins!`;
 }
 
 function drawMessage() {
@@ -31,7 +31,7 @@ function drawMessage() {
 }
 
 function currentPlayerMessage() {
-  messageDisplay.innerHTML = `${currentPlayer.token} turn`;
+  messageDisplay.innerHTML = `${currentPlayer.token}'s turn`;
 }
 
 function playersView(players) {
