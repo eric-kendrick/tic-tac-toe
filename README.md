@@ -2,19 +2,13 @@
 
 ### Abstract:
   Tic Tac Toe is a two-player game app based on the traditional game. Players take turns placing their tokens -in this game hearts and stars- in empty squares to try to connect three of their tokens vertically, horizontally or diagonally. The first player to do so wins, their win is tallied, and a new game begins after the board refreshes.
+  
 ### Installation Instructions:
-  To clone and run this application you will need [Git](https://git-scm.com/) installed on your computer. No dependencies are required for program execution.
+  To clone and run this application you will need [Git](https://git-scm.com/) installed on your computer. No dependencies are required for program execution.![Screenshot 2023-09-25 at 5 15 17 PM](https://github.com/eric-kendrick/tic-tac-toe/assets/45040241/e990d39c-4c0d-4eba-b007-b658b19c2cc4)
+
 
 ### Preview of App:
-<iframe
-  width="340"
-  height="180"
-  src="https://www.loom.com/share/861031c3de204a109455c0e69b6fcb6c?sid=f7a6327d-c549-4a72-a19d-506ca8d44ac9"
-  frameborder="0"
-  allow="autoplay"
-  allowfullscreen
->
-</iframe>
+<iframe src="https://www.loom.com/embed/861031c3de204a109455c0e69b6fcb6c?sid=0d5f2bad-a73f-49b5-b500-fb4c74fb3604" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 
 ### Context:
   Hang in There is the culmination solo project in Module 1 of Turing's front-end engineering program, and the project scope required the application to be delivered within seven days. The project was completed utilizing HTML, CSS, and Javascript without a library.
