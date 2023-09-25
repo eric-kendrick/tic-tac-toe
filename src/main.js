@@ -15,8 +15,8 @@ function createPlayer(id, token) {
 };
 
 function addPlayers() {
-  var player1 = createPlayer(1, 'X');
-  var player2 = createPlayer(2, 'O');
+  var player1 = createPlayer(1, '💛');
+  var player2 = createPlayer(2, '⭐️');
 
   players.push(player1, player2);
   playersView(players);
