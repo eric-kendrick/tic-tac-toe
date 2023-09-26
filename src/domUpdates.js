@@ -12,15 +12,15 @@ boxes.forEach(function (box) {
 });
 
 //------------- DOM Functions -----------------//
+function newGamePlayerChange() {
+  startingPlayer = startingPlayer === players[0] ? players[1] : players[0];
+  messageDisplay.innerText = `${startingPlayer.token}'s turn`;
+}
 
 function changePlayer() {
   currentPlayer = currentPlayer === players[0] ? players[1] : players[0];
   messageDisplay.innerText = `${currentPlayer.token}'s turn`;
 };
-
-function newGamePlayerChange() {
-  startingPlayer = startingPlayer === players[0] ? players[1] : players[0];
-}
 
 function winnerMessage(player) {
   messageDisplay.innerHTML = `${player.token} wins!`;

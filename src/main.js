@@ -1,11 +1,8 @@
-
-//------------- Variables -------------------//
 var clickCount = 0;
 var players = [];
-var currentPlayer;
 var startingPlayer;
+var currentPlayer;
 
-//------------- Functions --------------//
 function createPlayer(id, token) {
   return {
     id: id,
@@ -20,8 +17,8 @@ function addPlayers() {
 
   players.push(player1, player2);
   playersView(players);
-
-  currentPlayer = player1;
+  startingPlayer = players[0];
+  currentPlayer = players[0];
   currentPlayerMessage();
 };
 
