@@ -1,4 +1,4 @@
-# Hang in There  
+# Tic Tac Toe
 
 ### Abstract:
   Tic Tac Toe is a two-player game app based on the traditional game. Players take turns placing their tokens -in this game hearts and stars- in empty squares to try to connect three of their tokens vertically, horizontally or diagonally. The first player to do so wins, their win is tallied, and a new game begins after the board refreshes.
