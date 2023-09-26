@@ -8,6 +8,7 @@
 
 
 ### Preview of App:
+<img width="1391" alt="Screenshot 2023-09-26 at 2 55 02 PM" src="https://github.com/eric-kendrick/tic-tac-toe/assets/45040241/70e3536c-89ef-4370-8b86-bd92c40ea300">
 
 
 ### Context:
