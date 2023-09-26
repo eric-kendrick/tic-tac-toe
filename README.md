@@ -5,8 +5,6 @@
   
 ### Installation Instructions:
   To clone and run this application you will need [Git](https://git-scm.com/) installed on your computer. No dependencies are required for program execution.
-![Screenshot 2023-09-25 at 5 15 17 PM](https://github.com/eric-kendrick/tic-tac-toe/assets/45040241/e990d39c-4c0d-4eba-b007-b658b19c2cc4)
-
 
 ### Preview of App:
 <img width="1391" alt="Screenshot 2023-09-26 at 2 55 02 PM" src="https://github.com/eric-kendrick/tic-tac-toe/assets/45040241/70e3536c-89ef-4370-8b86-bd92c40ea300">
