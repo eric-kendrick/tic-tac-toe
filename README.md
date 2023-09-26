@@ -8,10 +8,10 @@
 
 
 ### Preview of App:
-<iframe src="https://www.loom.com/embed/861031c3de204a109455c0e69b6fcb6c?sid=0d5f2bad-a73f-49b5-b500-fb4c74fb3604" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+
 
 ### Context:
-  Hang in There is the culmination solo project in Module 1 of Turing's front-end engineering program, and the project scope required the application to be delivered within seven days. The project was completed utilizing HTML, CSS, and Javascript without a library.
+ Tic Tac Toe is the culmination solo project in Module 1 of Turing's front-end engineering program, and the project scope required the application to be delivered within seven days. The project was completed utilizing HTML, CSS, and Javascript without a library.
 
 
 ### Learning Goals:
