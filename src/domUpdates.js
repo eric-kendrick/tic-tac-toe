@@ -1,8 +1,8 @@
 //-------------- Query Selectors ------------//
 
-var boxes = document.querySelectorAll('section > div');
-var messageDisplay = document.querySelector('.board-message');
-var resetBtn = document.querySelector('.reset-btn');
+const boxes = document.querySelectorAll('section > div');
+const messageDisplay = document.querySelector('.board-message');
+const resetBtn = document.querySelector('.reset-btn');
 
 //------------- Event Listeners ------------//
 
@@ -35,13 +35,13 @@ function currentPlayerMessage() {
 }
 
 function playersView(players) {
-  var playerOneDisplay = document.querySelector('.player-one-header');
+  const playerOneDisplay = document.querySelector('.player-one-header');
   playerOneDisplay.innerHTML = 
   `<p class='player-token'>${players[0].token}</p>
    <p class='player-win-view'>${players[0].wins} wins</p>
   `;
 
-  var playerTwoDisplay = document.querySelector('.player-two-header');
+  const playerTwoDisplay = document.querySelector('.player-two-header');
   playerTwoDisplay.innerHTML = 
   `<p class='player-token'>${players[1].token}</p>
    <p class='player-win-view'>${players[1].wins} wins</p>
