@@ -1,7 +1,7 @@
-var clickCount = 0;
-var players = [];
-var startingPlayer;
-var currentPlayer;
+let clickCount = 0;
+let players = [];
+let startingPlayer;
+let currentPlayer;
 
 function createPlayer(id, token) {
   return {
@@ -12,8 +12,8 @@ function createPlayer(id, token) {
 };
 
 function addPlayers() {
-  var player1 = createPlayer(1, '💛');
-  var player2 = createPlayer(2, '⭐️');
+  const player1 = createPlayer(1, '💛');
+  const player2 = createPlayer(2, '⭐️');
 
   players.push(player1, player2);
   playersView(players);
@@ -23,7 +23,7 @@ function addPlayers() {
 };
 
 function checkForWin(player) {
-  var winArrays = [
+  const winArrays = [
     [0, 1, 2], [3, 4, 5],
     [6, 7, 8], [0, 3, 6],
     [1, 4, 7], [2, 5, 8],
@@ -31,8 +31,8 @@ function checkForWin(player) {
   ];
 
   for (let i = 0; i < winArrays.length; i++) {
-    var winCombos = winArrays[i];
-    var[one, two, three] = [boxes[winCombos[0]], boxes[winCombos[1]], boxes[winCombos[2]]];
+    let winCombos = winArrays[i];
+    let [one, two, three] = [boxes[winCombos[0]], boxes[winCombos[1]], boxes[winCombos[2]]];
 
     if (one.innerHTML === player.token && two.innerHTML === player.token &&
       three.innerHTML === player.token) {
